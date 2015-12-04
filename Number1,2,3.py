@@ -31,7 +31,18 @@ def number3(response):
   print
 
 def number4(response):
-  pass
+  sentence = response.strip().lower()
+  words=sentence.split()
+  wordDict={}
+  ctr=0
+  for w in words:
+    if w not in wordDict:
+      wordDict[w]=1
+    else:
+      wordDict[w]+=1
+      
+  for (word,count) in wordDict.items():
+    print str(word)+' : '+str(count)
 
 def main():
   print 'NUMBER 1'
