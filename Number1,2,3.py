@@ -10,7 +10,15 @@ def number1(firstname,lastname):
   print wholename
   
 def number2(name):
-  pass
+  print 'Inputed whole name: ',name
+  firstname=[]
+  lastname=[]
+  for i in name:
+    (fname, lname) = i.split()
+    firstname.append(fname)
+    lastname.append(lname)
+  print firstname
+  print lastname
   
 def number3(response):
   pass
