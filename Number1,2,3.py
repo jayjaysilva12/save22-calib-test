@@ -21,7 +21,14 @@ def number2(name):
   print lastname
   
 def number3(response):
-  pass
+  x = (x *2 for x in range(1, 51))
+  x = list(x)
+  total = 0
+  for i in x:
+    total = total + i
+  print x
+  print total
+  print
 
 def number4(response):
   pass
