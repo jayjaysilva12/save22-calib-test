@@ -1,4 +1,5 @@
-
+import turtle
+t=turtle
 words=[('pedro',22),('juan',23),('pepe',24)]
 
 def byName(key):
@@ -7,9 +8,37 @@ def byName(key):
 def byAge(value):
     return value[1]
 
-def turtle():
-	print 'turtle'
-	pass
+def turtle(val):
+	t.pensize(3)
+	t.color('red')
+	for i in range(0,val):
+		t.left(135)
+		t.forward(150)
+		t.right(90)
+		t.forward(45)
+		t.right(90)
+		t.forward(150)
+		t.left(90)
+		t.forward(150)
+		t.right(90)
+		t.forward(45)
+		t.right(90)
+		t.forward(150)
+		t.left(90)
+		t.forward(150)
+		t.right(90)
+		t.forward(45)
+		t.right(90)
+		t.forward(150)
+		t.left(90)
+		t.forward(150)
+		t.right(90)
+		t.forward(45)
+		t.right(90)
+		t.forward(150)
+
+	t.exitonclick()
+	exit()
 
 def add(fnum,snum):
 	return fnum + snum
@@ -39,7 +68,7 @@ def calc():
 		toPrint=mult(firstNumber,secondNumber)
 	elif op == '/':
 		toPrint=div(firstNumber,secondNumber)
-	print toPrint
+	print 'The answer is: ', toPrint
 
 def main():
 	while 1:
@@ -77,7 +106,20 @@ def main():
 					exit()
 				print toPrint
 		elif ch == 2:
-			turtle()
+			print 
+			print '[1]Letter X'
+			print '[2]Windmill'
+			print '[3]Back'
+			print '[ELSE EXIT]'
+			cho = input('Enter Choice: ')
+			if cho == 1:
+				turtle(1)
+			elif cho == 2:
+				turtle(8)
+			elif cho == 3:
+				main()
+			else:
+				exit()
 		elif ch == 3:
 			calc()
 		else:
