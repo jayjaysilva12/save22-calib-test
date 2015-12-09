@@ -4,9 +4,7 @@
 def number1(firstname,lastname):
   print 'Inputed first name: ',firstname
   print 'Inputed last name: ',lastname
-  wholename=[]
-  for i in range(len(firstname)):
-    wholename.append(firstname[i]+' '+lastname[i])
+  wholename = [('{} {}'.format(x, y)) for x,y in zip(firstname,lastname)]
   print wholename
   print
   
