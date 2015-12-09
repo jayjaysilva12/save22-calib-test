@@ -11,9 +11,35 @@ def turtle():
 	print 'turtle'
 	pass
 
+def add(fnum,snum):
+	return fnum + snum
+
+def sub(fnum,snum):
+	return fnum - snum
+
+def mult(fnum,snum):
+	return fnum * snum
+
+def div(fnum,snum):
+	return fnum / snum
+
+def enterNum():
+	firstNumber = input('Enter Number: ')
+	secondNumber = input('Enter Number: ')
+	return (firstNumber,secondNumber)
+
 def calc():
-	print 'calc'
-	pass
+	(firstNumber,secondNumber)=enterNum()
+	op = raw_input('Enter operand: ')
+	if op == '+':
+		toPrint=add(firstNumber,secondNumber)
+	elif op == '-':
+		toPrint=sub(firstNumber,secondNumber)
+	elif op == '*':
+		toPrint=mult(firstNumber,secondNumber)
+	elif op == '/':
+		toPrint=div(firstNumber,secondNumber)
+	print toPrint
 
 def main():
 	while 1:
