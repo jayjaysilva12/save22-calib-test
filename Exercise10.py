@@ -54,12 +54,12 @@ def div(fnum,snum):
 
 def enterNum():
 	firstNumber = input('Enter Number: ')
+	op = raw_input('Enter operand: ')
 	secondNumber = input('Enter Number: ')
-	return (firstNumber,secondNumber)
+	return (firstNumber,op,secondNumber)
 
 def calc():
-	(firstNumber,secondNumber)=enterNum()
-	op = raw_input('Enter operand: ')
+	(firstNumber,op,secondNumber)=enterNum()
 	if op == '+':
 		toPrint=add(firstNumber,secondNumber)
 	elif op == '-':
