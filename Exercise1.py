@@ -31,6 +31,7 @@ def number3(response):
   print
 
 def last(tup):
+  print tup[-1]
   return tup[-1]
   
   
