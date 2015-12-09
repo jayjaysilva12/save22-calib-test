@@ -8,6 +8,7 @@ def number1(firstname,lastname):
   for i in range(len(firstname)):
     wholename.append(firstname[i]+' '+lastname[i])
   print wholename
+  print
   
 def number2(name):
   print 'Inputed whole name: ',name
@@ -19,6 +20,7 @@ def number2(name):
     lastname.append(lname)
   print firstname
   print lastname
+  print
   
 def number3(response):
   x = (x *2 for x in range(1, 51))
@@ -30,6 +32,10 @@ def number3(response):
   print total
   print
 
+def last(tup):
+  return tup[-1]
+  
+  
 def number4(response):
   sentence = response.strip().lower()
   words=sentence.split()
@@ -40,8 +46,10 @@ def number4(response):
       wordDict[w]=1
     else:
       wordDict[w]+=1
-      
-  for (word,count) in wordDict.items():
+  sortedWords=sorted(wordDict.items(), key=last, reverse=True)
+  worAndCount=[]
+  print 'NUMBER 4'
+  for (word,count) in sortedWords:
     print str(word)+' : '+str(count)
 
 def main():
