@@ -10,14 +10,14 @@ def mult(fnum,snum):
 def div(fnum,snum):
 	return fnum / snum
 
-def input1():
-  return int(raw_input('Enter number: '))
+def input1(input = raw_input):
+  return input ('Enter number: ')
 
 def op(input = raw_input):
   return input ('Enter operator: ')
   
-def input2():
-  return int(raw_input('Enter number: '))
+def input2(input = raw_input):
+  return input ('Enter number: ')
 
 def operator(num1,op,num2):
 	# if op == '+':
