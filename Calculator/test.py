@@ -30,6 +30,14 @@ class TestCalculator(unittest.TestCase):
     def test_output(self):
     	self.assertEqual(calculator.output(13,'+',11,24),'13 + 11 = 24')
 
+    def test_success(self):
+		num1=calculator.input1(self.mock_input1)
+		oper=calculator.op(self.mock_op)
+		num2=calculator.input2(self.mock_input2)
+		ans=calculator.operator(num1,oper,num2)
+		final=calculator.output(num1,oper,num2,ans)
+		self.assertEqual(final,'1 + 3 = 4')
+
     def test_input1(self):
     	self.assertEqual(calculator.input1(self.mock_input1),1)
 
@@ -37,16 +45,18 @@ class TestCalculator(unittest.TestCase):
     	return 1
 
     def test_op(self):
-    	self.assertEqual(calculator.op(self.mock_op),2)
+    	self.assertEqual(calculator.operator(1,self.mock_op(''),3),4)
 
     def mock_op(self,prompt):
-    	return 2
+    	return '+'
 
     def test_input2(self):
     	self.assertEqual(calculator.input2(self.mock_input2),3)
 
     def mock_input2(self,prompt):
     	return 3
+
+
 
 if __name__=='__main__':
 	unittest.main()
