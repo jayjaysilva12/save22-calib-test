@@ -19,7 +19,7 @@ class TestCalculator(unittest.TestCase):
     		self.assertEqual(calculator.div(10,0))
 
     def test_None(self):
-    	self.assertEqual(calculator.add(13,'ab',11),None)
+    	self.assertEqual(calculator.operator(13,'ab',11),None)
 
     def test_operator(self):
       self.assertEqual(calculator.add(13,11),24)
