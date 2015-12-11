@@ -27,5 +27,8 @@ class TestCalculator(unittest.TestCase):
       self.assertEqual(calculator.div(16,2),8)
       self.assertEqual(calculator.mult(7,-3),-21)
 
+    def test_output(self):
+    	
+
 if __name__=='__main__':
   unittest.main()
