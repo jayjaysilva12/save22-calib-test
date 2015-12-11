@@ -13,8 +13,8 @@ def div(fnum,snum):
 def input1():
   return int(raw_input('Enter number: '))
 
-def op():
-  return raw_input('Enter operator: ')
+def op(input = raw_input):
+  return input ('Enter operator: ')
   
 def input2():
   return int(raw_input('Enter number: '))

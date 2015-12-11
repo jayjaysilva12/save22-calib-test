@@ -30,5 +30,11 @@ class TestCalculator(unittest.TestCase):
     def test_output(self):
     	self.assertEqual(calculator.output(13,'+',11,24),'13 + 11 = 24')
 
+    def test_op(self):
+    	self.assertEqual(calculator.op(self.mock_input),1)
+
+    def mock_input(self,prompt):
+    	return 1
+
 if __name__=='__main__':
 	unittest.main()
