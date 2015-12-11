@@ -41,4 +41,5 @@ def main():
   ans=operator(num1,oper,num2)
   print output(num1,oper,num2,ans)
   
-main()
+if __name__ == '__main__':
+  main()
