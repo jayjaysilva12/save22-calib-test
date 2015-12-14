@@ -56,6 +56,41 @@ class TestCalculator(unittest.TestCase):
     def mock_input2(self,prompt):
     	return 3
 
+    def test_DivideByZero(self):
+        self.assertEqual(calculator.input1(self.mock_num1),1)
+        self.assertEqual(calculator.op(self.mock_div),'/')
+        self.assertEqual(calculator.input2(self.mock_num2),0)
+
+    def mock_num1(self,prompt):
+        return 1
+    def mock_div(self,prompt):
+        return '/'
+    def mock_num2(self,prompt):
+        return 0
+
+    def test_StringInputs(self):
+        self.assertEqual(calculator.input1(self.mock_strNum1),'A')
+        self.assertEqual(calculator.op(self.mock_add),'+')
+        self.assertEqual(calculator.input2(self.mock_strNum2),'C')
+
+    def mock_strNum1(self,prompt):
+        return 'A'
+    def mock_add(self,prompt):
+        return '+'
+    def mock_strNum2(self,prompt):
+        return 'C'
+
+    def testIntAndString(self):
+        self.assertEqual(calculator.input1(self.mock_intStrNum1),1)
+        self.assertEqual(calculator.op(self.mock_intStrAdd),'+')
+        self.assertEqual(calculator.input2(self.mock_intStrNum2),'A')
+
+    def mock_intStrNum1(self,prompt):
+        return 1
+    def mock_intStrAdd(self,prompt):
+        return '+'
+    def mock_intStrNum2(self,prompt):
+        return 'A'
 
 
 if __name__=='__main__':
